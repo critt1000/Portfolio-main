@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+nav {
+  background-color: #13093f;
+  color: #fff;
+  height: 100vh;
+}
+
+nav .container {
+  display: grid;
+  justify-content: center;
+  grid-row-gap: 100px;
+}
+
+nav img {
+  padding: 40px 0 0 0;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  padding: 20px 0;
+}
+header {
+  background-color: #cacaca;
+  height: 100vh;
+}
+
+header h1 {
+  text-align: center;
+}
