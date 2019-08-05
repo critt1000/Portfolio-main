@@ -4,28 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Christian Rittmann - Portfolio</title>
   </head>
   <body>
-    <nav>
+    <nav class="navbar">
       <div class="container">
-        <img src="#" alt="Headshot Portrait" />
-        <ul>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
+        <h1 class="nav-header">Christian Rittmann's Portfolio</h1>
+        <img
+          src="./images/headshot_picture.jpg"
+          alt="Headshot Portrait"
+          class="nav-image"
+        />
+        <ul class="nav-ul">
+          <li class="nav-list-item"><a href="#" class="nav-a">About</a></li>
+          <li class="nav-list-item">
+            <a href="#" class="nav-a">Skills / Projects</a>
+          </li>
+          <li class="nav-list-item"><a href="#" class="nav-a">Contact</a></li>
         </ul>
       </div>
     </nav>
 
-    <header>
-      <h1>About</h1>
+    <section class="about-section" id="about">
+      <h1 class="about-title">About Christian</h1>
 
-      <p>
-        A web developer looking for opportunities to expand skills and
-        knowledge, while meeting new people.
+      <p class="about-para">
+        I am a Front-End Web Developer. Originally from small town western
+        Kansas and an agriculture background. Went to Kansas State University
+        and recieved dual majors in Biology and Microbiology. I took a computer
+        programming class and liked the challenge of problem solving the
+        challenges of development. This lead to completing the Full-Stack Web
+        Developer program at KU Edwards Campus
       </p>
-    </header>
+
+      <p class="about-para">
+        When I'm not working on projects, I'm spending time with family or
+        friends, watching Udemy or Youtube videos, playing video games, or
+        depending on the season either at the lake / river or mountains. Also, a
+        fan of and watching Kansas State University, Kansas City Chiefs, and
+        Kansas City Royals
+      </p>
+
+      <a href="#" class="btn btn-about">To Projects</a>
+    </section>
+
+    <section class="projects-section">
+      <h1 class="projects-title">Skills and Projects</h1>
+    </section>
+
+    <section class="contact-section">
+      <h1 class="contact-title">Contact Form</h1>
+    </section>
   </body>
 </html>
