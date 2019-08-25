@@ -1,0 +1,454 @@
+/* Orange Color: #e67e22 */
+
+/* =============================
+  Basic Setup
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+  color: #555;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, minmax(1rem, auto));
+  grid-template-areas: "navbar" "header" "aboutSkills" "projects" "contact" "footer";
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+/* ================================
+Reusable components
+=================================== */
+
+section {
+  padding: 2rem 0;
+}
+
+/* ================== 
+Buttons ---- Reusable components  
+===================== */
+.btn {
+  width: 70%;
+  border-radius: 100px;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 4px #555;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 2px;
+  word-spacing: 6px;
+}
+
+.btn-fill {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn-fill:hover,
+.btn-fill:focus {
+  background-color: #fff;
+  color: #e67e22;
+  transform: translateY(-5px);
+  transition: background-color 0.4s, transform 0.4s;
+  outline: none;
+}
+
+.btn-ghost {
+  background-color: #fff;
+  color: #e67e22;
+}
+
+.btn-ghost:hover,
+.btn-ghost:focus {
+  background-color: #e67e22;
+  color: #fff;
+  transform: translateY(-5px);
+  transition: background-color 0.4s, transform 0.4s;
+  outline: none;
+}
+
+/* ================================
+Nav Bar
+=================================== */
+.nav {
+  grid-area: navbar;
+  background-color: #e2d62c;
+}
+.container-nav {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  height: 5vh;
+}
+
+.nav-logo {
+  justify-self: center;
+  align-self: center;
+}
+.main-nav {
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  list-style: none;
+  font-weight: 300;
+  font-size: 110%;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+.main-nav li {
+  margin: 0 3rem;
+}
+
+.main-nav li:nth-last-child() {
+  margin: 0;
+}
+
+.main-nav li a {
+  color: #000;
+}
+
+.main-nav li a:hover,
+.main-nav li a:focus {
+  color: #e67e22;
+  border-bottom: 2px solid #e67e22;
+  padding: 8px 0;
+  outline: 0;
+}
+
+/* ========================= 
+Sticky Navigation
+============================ */
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+/* ================================
+Header Section
+=================================== */
+
+.header {
+  grid-area: header;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./img/wheat.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+  color: #fff;
+  position: relative;
+}
+
+.header-text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-text-box h1 {
+  font-size: 240%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+
+.social-links-header,
+.social-links-header:link,
+.social-links-header:visited {
+  list-style: none;
+  display: flex;
+  margin: 2rem 0 0 0;
+}
+
+.social-links-header li,
+.social-links-header li:link,
+.social-links-header li:visited {
+  font-size: 2rem;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(112deg)
+    brightness(104%) contrast(103%);
+  margin-right: 2rem;
+}
+
+.social-links-header li a:hover,
+.social-links-header li a:focus {
+  border-bottom: 1px solid #e67e22;
+  padding: 0 0 8px 0;
+  transition: all 0.4s;
+}
+
+.social-links-header li:nth-last-child() {
+  margin-right: 0;
+}
+
+/* ================================
+About / Skills Section
+=================================== */
+
+.aboutSkills {
+  grid-area: aboutSkills;
+  background-color: #e8e8e8;
+}
+.about-container {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-container h1 {
+  margin: 0 0 1rem 0;
+  font-size: 200%;
+  font-weight: 400;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  color: #000;
+  text-align: center;
+}
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.skill-icon {
+  font-size: 3rem;
+  filter: invert(79%) sepia(65%) saturate(5513%) hue-rotate(350deg)
+    brightness(96%) contrast(87%);
+}
+.skill-title {
+  border-bottom: 2px solid #e67e22;
+  padding: 0 0 8px 0;
+  margin: 0 0 2rem 0;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.skill-item {
+  padding: 0.2rem 0;
+  list-style: none;
+}
+
+/* ================================
+Projects Section
+=================================== */
+
+.projects {
+  grid-area: projects;
+  padding: 2rem;
+  /* margin: 2rem 0; */
+}
+
+.projects-section-title {
+  margin: 0 0 2rem 0;
+  font-size: 200%;
+  font-weight: 400;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  color: #000;
+  text-align: center;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: #e8e8e8;
+}
+
+.project-img {
+  width: 100%;
+}
+
+.project a {
+  justify-self: center;
+}
+
+/* 
+.project-title {
+  margin-bottom: 1rem;
+} */
+
+/* ================================
+Contact Section
+=================================== */
+
+.contact {
+  grid-area: contact;
+  background-color: #e8e8e8;
+}
+
+.contact-header {
+  text-align: center;
+}
+
+.contact-header-title {
+  font-weight: 400;
+  font-size: 200%;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 5% 25% 60% 10%;
+  grid-template-rows: repeat(4, minmax(40px, auto));
+  grid-template-areas:
+    ". name input-name ."
+    ". email input-email ."
+    ". message input-message ."
+    ". submit input-submit .";
+}
+
+.label-name {
+  grid-area: name;
+}
+#name {
+  grid-area: input-name;
+}
+.label-email {
+  grid-area: email;
+}
+#email {
+  grid-area: input-email;
+}
+.label-message {
+  grid-area: message;
+}
+#message {
+  grid-area: input-message;
+}
+.label-submit {
+  grid-area: submit;
+}
+.submit-container {
+  grid-area: input-submit;
+}
+#submit {
+  border-radius: 100px;
+  border: 1px solid #e67e22;
+  background-color: #e67e22;
+  color: #fff;
+  font-weight: 300;
+  font-size: 100%;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-align: center;
+  width: auto;
+  padding: 0.5rem;
+}
+
+#submit:hover,
+#submit:focus {
+  background-color: #fff;
+  color: #e67e22;
+  transform: translateY(-5px);
+  outline: 0;
+  transition: background-color 0.4s, color 0.4s, transform 0.4s;
+}
+
+.label,
+.contact-form input {
+  margin: 1rem 0;
+  font-size: 120%;
+  font-weight: 300;
+}
+
+/* ================================
+Footer Section
+=================================== */
+
+.footer {
+  grid-area: footer;
+  background-color: #555;
+  padding: 2rem 0;
+  height: auto;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.footer-buttons-container {
+  justify-self: center;
+  align-self: center;
+}
+
+.btn-footer {
+  border-radius: 100px;
+  background-color: #e67e22;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.btn-footer:hover,
+.btn-footer:focus {
+  background-color: #fff;
+  color: #e67e22;
+  transform: translateY(-5px);
+  transition: all 0.4s;
+  outline: 0;
+}
+.social-links {
+  display: flex;
+  justify-self: center;
+}
+
+.social-links li {
+  margin-right: 2rem;
+  font-size: 200%;
+  list-style: none;
+}
+
+.social-links li a {
+  filter: invert(53%) sepia(96%) saturate(1246%) hue-rotate(349deg)
+    brightness(96%) contrast(88%);
+}
+
+.social-links li a:hover,
+.social-links li a:focus {
+  filter: invert(100%) sepia(56%) saturate(2%) hue-rotate(308deg)
+    brightness(113%) contrast(101%);
+  border-bottom: 1px solid #e67e22;
+  transition: border-bottom 0.4s, filter 0.4s;
+  outline: 0;
+}
+
+.social-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-text {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.footer-para {
+  color: #fff;
+}

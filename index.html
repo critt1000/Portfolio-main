@@ -4,61 +4,300 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      href="http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic"
       rel="stylesheet"
+      type="text/css"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>Christian Rittmann - Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+    <link rel="stylesheet" href="./resources/css/queries.css" />
+    <link rel="stylesheet" href="./resources/css/style.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"
+    ></script>
+    
+    <title>Christian Rittmann</title>
   </head>
   <body>
-    <nav class="navbar">
-      <div class="container">
-        <h1 class="nav-header">Christian Rittmann's Portfolio</h1>
-        <img
-          src="./images/headshot_picture.jpg"
-          alt="Headshot Portrait"
-          class="nav-image"
-        />
-        <ul class="nav-ul">
-          <li class="nav-list-item"><a href="#" class="nav-a">About</a></li>
-          <li class="nav-list-item">
-            <a href="#" class="nav-a">Skills / Projects</a>
+    <!-- <header class="header"> -->
+      <nav class="nav" id="navbar">
+        <div class="container-nav">
+          <h1 class="nav-logo">Christian Logo</h1>
+          <ul class="main-nav">
+            <li><a href="#">About / Skills</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <!-- <a class="mobile-nav-icon">
+            <ion-icon name="menu"></ion-icon>
+          </a> -->
+        </div>
+      </nav>
+      <header class="header">
+      <div class="header-text-box">
+        <h1>Hello, I'm Christian Rittmann <br />A Front-end Web Developer</h1>
+        <ul class="social-links-header">
+          <li>
+            <a href="#"><ion-icon class="icon icon-header"name="logo-github"></ion-icon></a>
           </li>
-          <li class="nav-list-item"><a href="#" class="nav-a">Contact</a></li>
+          <li>
+            <a href="#"><ion-icon class="icon icon-header" name="logo-linkedin"></ion-icon></a>
+          </li>
         </ul>
       </div>
-    </nav>
+    </header>
 
-    <section class="about-section" id="about">
-      <h1 class="about-title">About Christian</h1>
+    <section class="aboutSkills">
+      <div class="about-container">
+        <h1>About &mdash; Skills</h1>
+        <p class="about-para">
+          I'm a Front-end Web Developer. An avid continual learner, with a
+          passion for solving the problem. Originally from an agricultural
+          setting in rural America, with dual degrees in Biology and
+          Microbiology. Adept at working in many work environments, settings,
+          and cultures.
+        </p>
+      </div>
+      <div class="skills-container">
+        <div class="skill">
+          <ion-icon class="skill-icon" name="desktop"></ion-icon>
+          <h3 class="skill-title">Front-end</h3>
+          <ul class="skill-list">
+            <li class="skill-item">
+              HTML5
+            </li>
+            <li class="skill-item">
+              CSS3
+            </li>
+            <li class="skill-item">
+              Javascript
+            </li>
+            <li class="skill-item">
+              JQuery
+            </li>
+            <li class="skill-item">
+              React
+            </li>
+          </ul>
+        </div>
 
-      <p class="about-para">
-        I am a Front-End Web Developer. Originally from small town western
-        Kansas and an agriculture background. Went to Kansas State University
-        and recieved dual majors in Biology and Microbiology. I took a computer
-        programming class and liked the challenge of problem solving the
-        challenges of development. This lead to completing the Full-Stack Web
-        Developer program at KU Edwards Campus
-      </p>
+        <div class="skill">
+          <ion-icon class="skill-icon" name="filing"></ion-icon>
+          <h3 class="skill-title">Back-end</h3>
+          <ul class="skill-list">
+            <li class="skill-item">
+              Node.JS
+            </li>
+            <li class="skill-item">
+              MySQL
+            </li>
+            <li class="skill-item">
+              MongoDB
+            </li>
+          </ul>
+        </div>
 
-      <p class="about-para">
-        When I'm not working on projects, I'm spending time with family or
-        friends, watching Udemy or Youtube videos, playing video games, or
-        depending on the season either at the lake / river or mountains. Also, a
-        fan of and watching Kansas State University, Kansas City Chiefs, and
-        Kansas City Royals
-      </p>
+        <div class="skill">
+          <ion-icon class="skill-icon" name="brush"></ion-icon>
+          <h3 class="skill-title">Design</h3>
+          <ul class="skill-list">
+            <li class="skill-item">
+              Zeplin
+            </li>
+            <li class="skill-item">
+              Lunacy
+            </li>
+            <li class="skill-item">
+              Adobe XD
+            </li>
+          </ul>
+        </div>
 
-      <a href="#" class="btn btn-about">To Projects</a>
+        <div class="skill">
+          <ion-icon class="skill-icon" name="hammer"></ion-icon>
+          <h3 class="skill-title">Additional</h3>
+          <ul class="skill-list">
+            <li class="skill-item">
+              Express.JS
+            </li>
+            <li class="skill-item">
+              Sequelize.JS
+            </li>
+            <li class="skill-item">
+              Mongoose.JS
+            </li>
+            <li class="skill-item">
+              Handlebars
+            </li>
+            <li class="skill-item">
+              Bootstrap
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section class="projects-section">
-      <h1 class="projects-title">Skills and Projects</h1>
+    <section class="projects">
+      <div class="projects-header">
+        <h1 class="projects-section-title">Projects</h1>
+      </div>
+
+      <div class="projects-container">
+        <div class="project">
+          <img
+            class="project-img"
+            src="./resources/img/berlin.jpg"
+            alt="Berlin"
+          />
+          <h3 class="project-title">Unger Chiropractic</h3>
+          <p class="project-para">
+            A website that was built for my hometown's Chiropractic Clinic. Made
+            with HTML5, CSS3, and Bootstrap
+          </p>
+          <a href="#" class="btn btn-fill">See Code</a>
+          <a href="#" class="btn btn-ghost">See Project</a>
+        </div>
+
+        <div class="project">
+          <img
+            class="project-img"
+            src="./resources/img/lisbon-3.jpg"
+            alt="Lisbon"
+          />
+          <h3 class="project-title">Oberlin Concrete</h3>
+          <p class="project-para">
+            A website that was built for my hometown's concrete business. Made
+            with HTML5 and CSS3
+          </p>
+          <a href="#" class="btn btn-fill">See Code</a>
+          <a href="#" class="btn btn-ghost">See Project</a>
+        </div>
+
+        <div class="project">
+          <img
+            class="project-img"
+            src="./resources/img/london.jpg"
+            alt="London"
+          />
+          <h3 class="project-title">Fylo 1</h3>
+          <p class="project-para">
+            A challenge from
+            <span
+              ><a
+                class="project-para-span"
+                href="frontendmentor.io"
+                target="blank"
+                >frontendmentor.io</a
+              ></span
+            >
+            where you take a design file and build it. Made with HTML5 and CSS3
+          </p>
+          <a href="#" class="btn btn-fill">See Code</a>
+          <a href="#" class="btn btn-ghost">See Project</a>
+        </div>
+
+        <div class="project">
+          <img
+            class="project-img"
+            src="./resources/img/san-francisco.jpg"
+            alt="San Francisco"
+          />
+          <h3 class="project-title">Fylo 2</h3>
+          <p class="project-para">
+            A challenge from
+            <span class="project-para-span"
+              ><a href="frontendmentor.io" target="blank"
+                >frontendmentor.io</a
+              ></span
+            >
+            where you take a design file and build it. Made with HTML5 and CSS3
+          </p>
+          <a href="#" class="btn btn-fill">See Code</a>
+          <a href="#" class="btn btn-ghost">See Project</a>
+        </div>
+      </div>
     </section>
 
-    <section class="contact-section">
-      <h1 class="contact-title">Contact Form</h1>
+    <section class="contact">
+      <div class="contact-header">
+        <h1 class="contact-header-title">Contact</h1>
+      </div>
+      <div class="contact-container">
+        <form method="POST" action="" class="contact-form">
+          <!-- <div class="input input-name"> -->
+            <label class="label label-name"for="name">Name:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your Name"
+              required
+            />
+          <!-- </div> -->
+
+          <!-- <div class="input input-email"> -->
+            <label class="label label-email" for="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your Email"
+              required
+            />
+          <!-- </div> -->
+
+          <!-- <div class="input input-message"> -->
+            <label class="label label-message" for="message">Message:</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          <!-- </div> -->
+
+          <!-- <div class="input input-submit"> -->
+            <label class="label label-submit" for="submit">Submit:</label>
+            <div class="submit-container">
+              <input type="submit" id="submit" value="Send Message!" />
+            </div>
+            
+          </div>
+        <!-- </form> -->
+      </div>
     </section>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <div class="footer-buttons-container">
+          <a class="btn-footer" href="#">Back To Top</a>
+        </div>
+          
+          <ul class="social-links">
+              <li>
+                <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+              </li>
+              <li>
+                <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+              </li>
+            </ul>
+      </div>
+      <div class="footer-text">
+        <p class="footer-para">Christian Rittmann &copy; 2019</p>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="./resources/js/script.js"></script>
   </body>
 </html>
