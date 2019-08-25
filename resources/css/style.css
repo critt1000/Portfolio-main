@@ -87,13 +87,13 @@ Nav Bar
 =================================== */
 .nav {
   grid-area: navbar;
-  background-color: #e2d62c;
+  background-color: #fff;
 }
 .container-nav {
   display: grid;
   grid-template-columns: 50% 50%;
   width: 100%;
-  height: 5vh;
+  height: 7vh;
 }
 
 .nav-logo {
@@ -451,4 +451,26 @@ Footer Section
 }
 .footer-para {
   color: #fff;
+}
+
+/* =======================
+@keyframes reusable components
+========================== */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-element {
+  animation: fade-in 3s;
+}
+
+.hidden {
+  opacity: 0;
 }
