@@ -269,6 +269,11 @@ About / Skills Section
   grid-area: aboutSkills;
   background-color: #e8e8e8;
 }
+
+#aboutSkillsSection:target {
+  padding-top: 10vh;
+}
+
 .about-container {
   width: 60%;
   margin: 0 auto;
@@ -318,6 +323,10 @@ Projects Section
   /* margin: 2rem 0; */
 }
 
+#projectsSection {
+  padding-top: 10vh;
+}
+
 .projects-section-title {
   margin: 0 0 2rem 0;
   font-size: 200%;
@@ -362,6 +371,10 @@ Contact Section
 .contact {
   grid-area: contact;
   background-color: #e8e8e8;
+}
+
+#contactSection {
+  padding-top: 10vh;
 }
 
 .contact-header {
