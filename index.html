@@ -29,23 +29,43 @@
     <title>Christian Rittmann</title>
   </head>
   <body>
-    <!-- <header class="header"> -->
       <nav class="nav" id="navbar">
-        <div class="container-nav">
+        <div class="logo">
+          <h3>Rittmann</h3>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="#">About/Skills</a>
+          </li>
+          <li>
+            <a href="#">Projects</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <!-- <div class="container-nav">
           <h1 class="nav-logo">Christian Logo</h1>
           <ul class="main-nav">
-            <li><a href="#">About / Skills</a></li>
+            <li><a href="#aboutSkillsSection">About / Skills</a></li>
             <li><a href="#">Projects</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
-          <!-- <a class="mobile-nav-icon">
-            <ion-icon name="menu"></ion-icon>
-          </a> -->
         </div>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div> -->
       </nav>
-      <header class="header">
+      <header class="header" id="headerSection">
       <div class="header-text-box">
-        <h1>Hello, I'm Christian Rittmann <br />A Front-end Web Developer</h1>
+        <h1>Hello, I'm Christian Rittmann. <br />A Front-end Web Developer.</h1>
         <ul class="social-links-header">
           <li>
             <a href="#"><ion-icon class="icon icon-header"name="logo-github"></ion-icon></a>
@@ -57,7 +77,7 @@
       </div>
     </header>
 
-    <section class="aboutSkills">
+    <section class="aboutSkills" id="aboutSkillsSection">
       <div class="about-container">
         <h1>About &mdash; Skills</h1>
         <p class="about-para">
@@ -69,7 +89,7 @@
         </p>
       </div>
       <div class="skills-container hidden">
-        <div class="skill">
+        <div class="skill skill-1">
           <ion-icon class="skill-icon" name="desktop"></ion-icon>
           <h3 class="skill-title">Front-end</h3>
           <ul class="skill-list">
@@ -91,7 +111,7 @@
           </ul>
         </div>
 
-        <div class="skill">
+        <div class="skill skill-2">
           <ion-icon class="skill-icon" name="filing"></ion-icon>
           <h3 class="skill-title">Back-end</h3>
           <ul class="skill-list">
@@ -107,7 +127,7 @@
           </ul>
         </div>
 
-        <div class="skill">
+        <div class="skill skill-3">
           <ion-icon class="skill-icon" name="brush"></ion-icon>
           <h3 class="skill-title">Design</h3>
           <ul class="skill-list">
@@ -123,7 +143,7 @@
           </ul>
         </div>
 
-        <div class="skill">
+        <div class="skill skill-4">
           <ion-icon class="skill-icon" name="hammer"></ion-icon>
           <h3 class="skill-title">Additional</h3>
           <ul class="skill-list">
@@ -147,7 +167,7 @@
       </div>
     </section>
 
-    <section class="projects">
+    <section class="projects" id="projectsSection">
       <div class="projects-header">
         <h1 class="projects-section-title">Projects</h1>
       </div>
@@ -164,8 +184,8 @@
             A website that was built for my hometown's Chiropractic Clinic. Made
             with HTML5, CSS3, and Bootstrap
           </p>
-          <a href="#" class="btn btn-fill">See Code</a>
-          <a href="#" class="btn btn-ghost">See Project</a>
+          <a href="#" class="btn btn-fill"> <span><ion-icon name="logo-github"></ion-icon></span> View Github</a>
+          <a href="#" class="btn btn-ghost"> <span><ion-icon name="globe"></ion-icon></span> View Site</a>
         </div>
 
         <div class="project">
@@ -179,8 +199,8 @@
             A website that was built for my hometown's concrete business. Made
             with HTML5 and CSS3
           </p>
-          <a href="#" class="btn btn-fill">See Code</a>
-          <a href="#" class="btn btn-ghost">See Project</a>
+          <a href="#" class="btn btn-fill"> <span><ion-icon name="logo-github"></ion-icon></span> View Github</a>
+          <a href="#" class="btn btn-ghost"> <span><ion-icon name="globe"></ion-icon></span> View Site</a>
         </div>
 
         <div class="project">
@@ -202,8 +222,8 @@
             >
             where you take a design file and build it. Made with HTML5 and CSS3
           </p>
-          <a href="#" class="btn btn-fill">See Code</a>
-          <a href="#" class="btn btn-ghost">See Project</a>
+          <a href="#" class="btn btn-fill"> <span><ion-icon name="logo-github"></ion-icon></span> View Github</a>
+          <a href="#" class="btn btn-ghost"> <span><ion-icon name="globe"></ion-icon></span> View Site</a>
         </div>
 
         <div class="project">
@@ -222,13 +242,13 @@
             >
             where you take a design file and build it. Made with HTML5 and CSS3
           </p>
-          <a href="#" class="btn btn-fill">See Code</a>
-          <a href="#" class="btn btn-ghost">See Project</a>
+          <a href="#" class="btn btn-fill"> <span><ion-icon name="logo-github"></ion-icon></span> View Github</a>
+          <a href="#" class="btn btn-ghost"> <span><ion-icon name="globe"></ion-icon></span> View Site</a>
         </div>
       </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contactSection">
       <div class="contact-header">
         <h1 class="contact-header-title">Contact</h1>
       </div>

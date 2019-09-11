@@ -47,7 +47,7 @@ Buttons ---- Reusable components
   width: 70%;
   border-radius: 100px;
   padding: 0.5rem;
-  box-shadow: 2px 2px 4px #555;
+  /* box-shadow: 5px 5px 10px #f7f7f7; */
   text-align: center;
   font-weight: 400;
   letter-spacing: 2px;
@@ -82,10 +82,62 @@ Buttons ---- Reusable components
   outline: none;
 }
 
+/* nav bar */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #cc8547;
+}
+
+.logo {
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.nav-links a {
+  color: #000;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 20px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  border-bottom: 2px solid #8ecc47;
+  padding: 8px 0;
+  outline: 0;
+  transition: all 0.3s ease;
+}
+
+.burger {
+  display: none;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
 /* ================================
 Nav Bar
 =================================== */
-.nav {
+/* .nav {
   grid-area: navbar;
   background-color: #fff;
 }
@@ -130,6 +182,17 @@ Nav Bar
   padding: 8px 0;
   outline: 0;
 }
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+  margin: 5px;
+} */
 
 /* ========================= 
 Sticky Navigation
@@ -453,6 +516,94 @@ Footer Section
   color: #fff;
 }
 
+/* Media Queries */
+
+@media screen and (max-width: 1000px) {
+  body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, minmax(1rem, auto));
+    grid-template-areas: "navbar" "header" "aboutSkills" "projects" "contact" "footer";
+  }
+
+  .nav-links {
+    width: 55%;
+  }
+
+  .about-container {
+    font-size: 80%;
+    font-weight: 400;
+  }
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .skill {
+    margin-top: 5rem;
+    position: relative;
+  }
+
+  .skill-icon {
+    text-align: center;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .skill-item {
+    /* list-style: circle; */
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* body {
+    overflow-x: hidden;
+  } */
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 93vh;
+    top: 7vh;
+    background-color: #cc8547;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    z-index: 20;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* mobile hamburger outside media query */
+.nav-active {
+  transform: translateX(0%);
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
 /* =======================
 @keyframes reusable components
 ========================== */
@@ -464,6 +615,17 @@ Footer Section
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes nav-links-fade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
 
