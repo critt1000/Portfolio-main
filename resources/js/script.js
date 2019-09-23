@@ -48,6 +48,7 @@ var animateHTML = function() {
 };
 animateHTML().init();
 
+// Mobile View Hamburger
 const mobileNav = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-links");
@@ -72,6 +73,7 @@ const mobileNav = () => {
 
 mobileNav();
 
+// Back to Top Button
 const toTop = () => {
   const topBtn = document.querySelector(".btnTop");
 
